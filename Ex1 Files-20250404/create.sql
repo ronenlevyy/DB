@@ -3,6 +3,8 @@ create table Country(
     CountryCode varchar(3) primary key,
     Region varchar(30),
     IncomeGroup varchar(30),
+    foreign key(Region) references Region(Region),
+    foreign key(IncomeGroup) references IncomeGroup(IncomeGroup)
 );
 
 create table Region(
@@ -24,17 +26,23 @@ create table University(
     latitude float,
     eng_name varchar(30) not null,
     longtitue float
+    CountryCode varchar(3) not null,
+    foreign key(CountryCode) references Country(CountryCode),
 );
 
 create table ClosedAt(
-    eng_name varchar(30) primary key,
+    iau_id1 varchar(30),
     Year integer check (Year>0),
+    primary key(iau_id1, Year),
+    foreign key(iau_id1) references University(iau_id1),
 );
 
 create table AcceptanceRate(
-    iau_id1 varchar(30) primary key,
-    Year integer check (Year>0) primary key,
-    students5_estimated integer
+    iau_id1 varchar(30),
+    Year integer check (Year>0),
+    students5_estimated integer,
+    primary key(iau_id1, Year),
+    foreign key(iau_id1) references University(iau_id1)
 );
 
 
