@@ -27,14 +27,14 @@ create table University(
     eng_name varchar(30) not null,
     longtitue float,
     CountryCode varchar(3) not null,
-    foreign key(CountryCode) references Country(CountryCode),
+    foreign key(CountryCode) references Country(CountryCode)
 );
 
 create table ClosedAt(
     iau_id1 varchar(30),
     Year integer check (Year>0),
     primary key(iau_id1, Year),
-    foreign key(iau_id1) references University(iau_id1),
+    foreign key(iau_id1) references University(iau_id1)
 );
 
 create table AcceptanceRate(
