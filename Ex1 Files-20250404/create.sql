@@ -7,7 +7,7 @@ create table IncomeGroup(
 );
 
 create table Country(
-    CountryName varchar(30) unique,
+    CountryName varchar(60) unique,
     CountryCode varchar(3) primary key,
     Region varchar(30),
     IncomeGroup varchar(30),
@@ -22,9 +22,9 @@ create table University(
     Privet01 boolean not null,
     FoudedYear integer check (FoudedYear>0),
     iau_id1 varchar(30) primary key,
-    orig_name varchar(30) not null,
+    orig_name varchar(180) not null,
     latitude float,
-    eng_name varchar(30) not null,
+    eng_name varchar(160) not null,
     longtitue float,
     CountryCode varchar(3) not null,
     foreign key(CountryCode) references Country(CountryCode)

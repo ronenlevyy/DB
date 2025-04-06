@@ -82,10 +82,11 @@ def process_row(row):
     specialized = row[14]
     year = row[15]
     students5_estimated = row[16]
-    countries[countrycode]=[countrycode,country,income_group,region]
+    countries[countrycode]=[country, countrycode, region, income_group]
     income_groups[income_group]=[income_group]
     regions[region]=[region]
-    universities[iau_id1]=[iau_id1,eng_name,orig_name,foundedyr,yrclosed,private01,latitude,longitude,phd_granting,divisions,specialized,countrycode]
+    universities[iau_id1]=[specialized, divisions, phd_granting, private01, foundedyr,
+                            iau_id1, orig_name, latitude, eng_name, longitude, countrycode]
     acceptance_rate[iau_id1,year]=[iau_id1,year,students5_estimated]
     closed_at[iau_id1,year]=[iau_id1,year]
 
@@ -93,7 +94,7 @@ def process_row(row):
 
 # return the list of all tables
 def get_names():
-    return ["Country", "Income_group", "Region", "University", "Closed_at", "Acceptance_rate"]
+    return["Region", "IncomeGroup", "Country", "University", "ClosedAt", "AcceptanceRate"]
 
 
 
