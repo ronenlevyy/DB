@@ -1,3 +1,11 @@
+create table Region(
+    Region varchar(30) primary key
+);
+
+create table IncomeGroup(
+    IncomeGroup varchar(30) primary key
+);
+
 create table Country(
     CountryName varchar(30) unique,
     CountryCode varchar(3) primary key,
@@ -5,14 +13,6 @@ create table Country(
     IncomeGroup varchar(30),
     foreign key(Region) references Region(Region),
     foreign key(IncomeGroup) references IncomeGroup(IncomeGroup)
-);
-
-create table Region(
-    Region varchar(30) primary key
-);
-
-create table IncomeGroup(
-    IncomeGroup varchar(30) primary key
 );
 
 create table University(
