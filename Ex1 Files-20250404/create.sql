@@ -25,7 +25,7 @@ create table University(
     orig_name varchar(30) not null,
     latitude float,
     eng_name varchar(30) not null,
-    longtitue float
+    longtitue float,
     CountryCode varchar(3) not null,
     foreign key(CountryCode) references Country(CountryCode),
 );
