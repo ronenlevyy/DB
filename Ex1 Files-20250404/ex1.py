@@ -3,25 +3,25 @@ from io import TextIOWrapper
 from zipfile import ZipFile
 
 #create files
-enrollment_outfile = open("enrollment.csv", 'w' , encoding='UTF8')
+enrollment_outfile = open("enrollment.csv", 'w' , encoding='UTF8', newline='')
 enrollment_outwriter = csv.writer(enrollment_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
-country_outfile = open("Country.csv", 'w' , encoding='UTF8')
+country_outfile = open("Country.csv", 'w' , encoding='UTF8', newline='')
 country_outwriter = csv.writer(country_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
-incomegroup_outfile = open("IncomeGroup.csv", 'w' , encoding='UTF8')
+incomegroup_outfile = open("IncomeGroup.csv", 'w' , encoding='UTF8', newline='')
 incomegroup_outwriter = csv.writer(incomegroup_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
-region_outfile = open("Region.csv", 'w' , encoding='UTF8')
+region_outfile = open("Region.csv", 'w' , encoding='UTF8', newline='')
 region_outwriter = csv.writer(region_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
-university_outfile = open("University.csv", 'w' , encoding='UTF8')
+university_outfile = open("University.csv", 'w' , encoding='UTF8', newline='')
 university_outwriter = csv.writer(university_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
-closed_at_outfile = open("ClosedAt.csv", 'w' , encoding='UTF8')
+closed_at_outfile = open("ClosedAt.csv", 'w' , encoding='UTF8', newline='')
 closed_at_outwriter = csv.writer(closed_at_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
-acceptance_rate_outfile = open("AcceptanceRate.csv", 'w' , encoding='UTF8')
+acceptance_rate_outfile = open("AcceptanceRate.csv", 'w' , encoding='UTF8', newline='')
 acceptance_rate_outwriter = csv.writer(acceptance_rate_outfile, delimiter=",", quoting=csv.QUOTE_MINIMAL)
 
 countries ={}
